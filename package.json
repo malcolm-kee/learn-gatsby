@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gatsby develop",
-    "fancy": "gatsby build",
+    "build": "gatsby build",
     "serve": "gatsby serve"
   },
   "keywords": [],
