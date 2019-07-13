@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "fancy": "gatsby build",
+    "serve": "gatsby serve"
   },
   "keywords": [],
   "author": "",

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Layout } from '../components/layout';
 
-const NotFoundPage = () => {
+const Nonsense = () => {
   return (
     <Layout>
-      <h1>Page Not Found</h1>
+      <h1>About Me</h1>
+      <p>Malcolm</p>
     </Layout>
   );
 };
 
-export default NotFoundPage;
+export default Nonsense;
