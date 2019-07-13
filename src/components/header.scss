@@ -1,0 +1,12 @@
+@import '../constants';
+
+.header {
+  background-color: $primary-color;
+  color: #fff;
+  &-container {
+    font-size: 3rem;
+    padding: 8px;
+    margin: 0 auto;
+    max-width: 1020px;
+  }
+}
