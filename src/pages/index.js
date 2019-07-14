@@ -1,11 +1,13 @@
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import React from 'react';
+import Image from 'gatsby-image';
 import { Layout } from '../components/layout';
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
   return (
     <Layout>
       <h1>Welcome to Malcolm Kee's Gatsby Site</h1>
+
       <p>crafted with tears and love.</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis aliquam doloribus! Ipsum
@@ -94,9 +96,22 @@ const HomePage = () => {
         Ut dolore, consequuntur dolores blanditiis deserunt debitis, possimus odio recusandae
         consequatur rerum inventore!
       </p>
+      <Image fixed={data.file.childImageSharp.fixed} />
       <Link to="/about-me">About Me</Link>
     </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  {
+    file(relativePath: { eq: "corgi.jpg" }) {
+      childImageSharp {
+        fixed(width: 500) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
 
 export default HomePage;
